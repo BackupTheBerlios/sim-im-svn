@@ -2292,7 +2292,7 @@ msgid "Plugin provides about information"
 msgstr "Esta extensión le permite mostrar información acerca de SIM"
 
 #: plugins/about/about.cpp:61
-msgid "&Bug report"
+msgid "&Bug report / Requests"
 msgstr "&Informar de fallo"
 
 #: plugins/about/about.cpp:71
