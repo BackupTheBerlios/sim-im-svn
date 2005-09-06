@@ -51,6 +51,8 @@
 
 #include <qimage.h>
 #include <qiodevice.h>
+//Added by qt3to4:
+#include <QImageIO>
 
 #include <stdio.h> // jpeglib needs this to be pre-included
 #include <setjmp.h>

@@ -21,7 +21,9 @@
 #include "simapi.h"
 #include "stl.h"
 
-#include <qiconset.h>
+#include <qicon.h>
+//Added by qt3to4:
+#include <QPixmap>
 
 #ifdef WIN32
 #if _MSC_VER > 1020
@@ -31,7 +33,7 @@
 
 using namespace std;
 
-class QMimeSourceFactory;
+class Q3MimeSourceFactory;
 
 namespace SIM
 {
