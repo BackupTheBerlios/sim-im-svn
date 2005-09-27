@@ -38,7 +38,7 @@
 #ifndef QJPEGIO_H
 #define QJPEGIO_H
 
-#include <qglobal.h>
+#include <QGlobalStatic>
 
 void qInitJpegIO();
 
