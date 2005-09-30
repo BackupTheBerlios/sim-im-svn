@@ -225,7 +225,7 @@ void *MonitorWindow::processEvent(Event *e)
     return NULL;
 }
 
-#ifndef _WINDOWS
+#ifndef _MSC_VER
 #include "monitor.moc"
 #endif
 

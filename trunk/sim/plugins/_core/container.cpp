@@ -1064,7 +1064,7 @@ bool UserTab::setBold(bool bBold)
     return true;
 }
 
-#ifndef WIN32
+#ifndef _MSC_VER
 #include "container.moc"
 #endif
 

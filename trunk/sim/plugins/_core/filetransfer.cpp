@@ -521,7 +521,7 @@ void FileTransferDlg::goDir()
     e.process();
 }
 
-#ifndef WIN32
+#ifndef _MSC_VER
 #include "filetransfer.moc"
 #endif
 
