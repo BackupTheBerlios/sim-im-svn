@@ -16,7 +16,7 @@
 #define WOOD_H
 
 #include <qwindowsstyle.h>
-#include <qpalette.h>
+#include <QPalette>
 
 class NorwegianWoodStyle : public QWindowsStyle
 {

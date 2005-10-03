@@ -16,7 +16,7 @@
 #define METAL_H
 
 #include <qwindowsstyle.h>
-#include <qpalette.h>
+#include <QPalette>
 
 class MetalStyle : public QWindowsStyle
 {
