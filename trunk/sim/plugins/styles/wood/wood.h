@@ -15,6 +15,7 @@
 #ifndef WOOD_H
 #define WOOD_H
 
+#include <qpushbutton.h>
 #include <qwindowsstyle.h>
 #include <qpalette.h>
 
