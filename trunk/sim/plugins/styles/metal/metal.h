@@ -17,6 +17,20 @@
 
 #include <qwindowsstyle.h>
 #include <qpalette.h>
+#include <qpushbutton.h>
+#include "qapplication.h"
+#include "qpainter.h"
+#include "qdrawutil.h" // for now
+#include "qpixmap.h" // for now
+#include "qpalette.h" // for now
+#include "qwidget.h"
+#include "qlabel.h"
+#include "qimage.h"
+#include "qpushbutton.h"
+#include "qwidget.h"
+#include "qrangecontrol.h"
+#include "qscrollbar.h"
+#include <limits.h>
 
 class MetalStyle : public QWindowsStyle
 {
