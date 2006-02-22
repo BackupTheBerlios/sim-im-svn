@@ -1,9 +1,5 @@
-/* crypto/ui/ui.h -*- mode:C; c-file-style: "eay" -*- */
-/* Written by Richard Levitte (richard@levitte.org) for the OpenSSL
- * project 2001.
- */
 /* ====================================================================
- * Copyright (c) 2001 The OpenSSL Project.  All rights reserved.
+ * Copyright (c) 2003 The OpenSSL Project.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -48,37 +44,31 @@
  * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
- * ====================================================================
- *
- * This product includes cryptographic software written by Eric Young
- * (eay@cryptsoft.com).  This product includes software written by Tim
- * Hudson (tjh@cryptsoft.com).
  *
  */
 
-#ifndef HEADER_UI_COMPAT_H
-#define HEADER_UI_COMPAT_H
+#ifndef HEADER_FIPS_RAND_H
+#define HEADER_FIPS_RAND_H
 
-#include <openssl/opensslconf.h>
-#include <openssl/ui.h>
+#include "des.h"
+
+#ifdef OPENSSL_FIPS
 
 #ifdef  __cplusplus
 extern "C" {
 #endif
 
-/* The following functions were previously part of the DES section,
-   and are provided here for backward compatibility reasons. */
+void FIPS_set_prng_key(const unsigned char k1[8],const unsigned char k2[8]);
+void FIPS_test_mode(int test,const unsigned char faketime[8]);
+void FIPS_rand_seed(const void *buf, FIPS_RAND_SIZE_T num);
+/* NB: this returns true if _partially_ seeded */
+int FIPS_rand_seeded(void);
 
-#define des_read_pw_string(b,l,p,v) \
-	_ossl_old_des_read_pw_string((b),(l),(p),(v))
-#define des_read_pw(b,bf,s,p,v) \
-	_ossl_old_des_read_pw((b),(bf),(s),(p),(v))
-
-int _ossl_old_des_read_pw_string(char *buf,int length,const char *prompt,int verify);
-int _ossl_old_des_read_pw(char *buf,char *buff,int size,const char *prompt,int verify);
+RAND_METHOD *FIPS_rand_method(void);
 
 #ifdef  __cplusplus
 }
+#endif
 #endif
 #endif
 
