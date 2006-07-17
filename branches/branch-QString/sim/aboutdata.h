@@ -49,7 +49,6 @@
 #include <qvaluelist.h>
 #include <qstring.h>
 
-class KAboutPersonPrivate;
 class KAboutDataPrivate;
 
 /**
@@ -114,10 +113,8 @@ private:
     const char *mEmailAddress;
     const char *mWebAddress;
 
-    KAboutPersonPrivate *d;
 };
 
-class KAboutTranslatorPrivate;
 /**
 * This structure is used to store information about a translator.
 * It can store the translator's name and an email address.
@@ -156,7 +153,6 @@ public:
 private:
     QString mName;
     QString mEmail;
-    KAboutTranslatorPrivate* d;
 };
 
 
@@ -414,6 +410,8 @@ private:
     const char *mLicenseText;
 
     KAboutDataPrivate *d;
+
+    COPY_RESTRICTED(KAboutData)
 };
 
 #endif
