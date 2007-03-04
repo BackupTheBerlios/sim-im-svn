@@ -41,9 +41,9 @@
 #include "qfeatures.h"
 
 #ifdef WIN32
-#if _MSC_VER > 1020
-#include <yvals.h>              
-#pragma warning(disable: 4611)  
+#if NO_MOC_INCLUDES > 1020
+#include <yvals.h>
+#pragma warning(disable: 4611)
 #endif
 #endif
 
