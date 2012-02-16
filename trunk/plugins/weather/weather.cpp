@@ -37,6 +37,7 @@
 #include "weather.h"
 #include "weathercfg.h"
 
+
 using namespace SIM;
 
 const unsigned CHECK1_INTERVAL = 30 * 60;
@@ -161,16 +162,43 @@ void WeatherPlugin::timeout()
     m_bForecast = false;
     if ((unsigned)now >= getForecastTime() + CHECK2_INTERVAL)
         m_bForecast = true;
-    QString url = "http://xoap.weather.com/weather/local/";
+    //some new working keys :-D I've found it on the street! but repair  ;)
+    //http://wxdata.weather.com/wxdata/mobile/mobagg/GMXX0265:1.js?locale=de_DE&key=e88cf1e8-a740-102c-bafd-001321203584 
+
+    QString url = "http://xml.weather.com/weather/local/";
+    //QString url = "http://wxdata.weather.com/wxdata/mobile/mobagg/";
+    //QString url = "http://wxdata.weather.com/wxdata/df/";
+    //QString url = "http://wxdata.weather.com/wxdata/mobile/mobagg/";
     url += getID();
-    //url += "?cc=*&prod=xoap&par=1004517364&key=a29796f587f206b2&unit=";
-	//url += "?unit="; //Quickfix Noragen
-	url += "?cc=*&par=1004517364&key=a29796f587f206b2&unit=";
+    url += "?cc=*&prod=xoap&par=1004517364&key=a29796f587f206b2&unit=";
+    //url += "?unit="; //Quickfix Noragen
+    //url += ":1.js?locale=en_US&key=e88cf1e8-a740-102c-bafd-001321203584&unit=";
+    //url +=".xml?key=47ff9b4c-91d5-11e0-b754-001c23d537c5&day=0,1,2,3,4,5,6,7,8,9&units=";
+    //url +=".xml?locale=en_US&key=47ff9b4c-91d5-11e0-b754-001c23d537c5&units=";
+        //API:
+        //attentions parameter "dayf" is in wxdata.weater.com different (days)
+
+        //day-forcast:
+        //http://wxdata.weather.com/wxdata/df/GMXX0265.xml?key=47ff9b4c-91d5-11e0-b754-001c23d537c5&day=0,1,2,3,4,5,6,7,8,9&units=m
+
+        //observation
+        //http://wxdata.weather.com/wxdata/obs_hirad/GMXX0265.xml?key=47ff9b4c-91d5-11e0-b754-001c23d537c5&units=m
+
+        //sunrise/sunset
+        //http://wxdata.weather.com/wxdata/ss/GMXX0265.xml?key=47ff9b4c-91d5-11e0-b754-001c23d537c5&days=10
+
+        //alerts
+        //http://wxdata.weather.com/wxdata/svr/GMXX0265.xml?key=47ff9b4c-91d5-11e0-b754-001c23d537c5&details=true
+        
+
+        //all aggregation: 
+        //http://wxdata.weather.com/wxdata/mobile/mobagg/GMXX0265.xml?locale=en_US&key=47ff9b4c-91d5-11e0-b754-001c23d537c5&day=0,1,2,3,4,5,6,7,8,9&units=m
     url += getUnits() ? "s" : "m";
     if (m_bForecast && getForecast()){
         url += "&dayf=";
         url += QString::number(getForecast());
     }
+    qDebug(url);
     fetch(url);
 }
 
@@ -205,7 +233,13 @@ bool WeatherPlugin::done(unsigned code, Buffer &data, const QString&)
     m_bCC	= false;
     m_bMoon	= false;
     reset();
-    if (!parse(data, false)){
+    //Json::Value root;   // will contains the root value after parsing.
+    //Json::Reader reader;
+    //bool parsingSuccessful = reader.parse( data.data(), root );
+    if (!parse(data, false))
+    
+    //if (!parsingSuccessful)
+    {
         log(L_WARN, "XML parse error");
         return false;
     }
@@ -333,7 +367,7 @@ void WeatherPlugin::updateButton()
     QString text = unquoteText(getButtonText());
     QString tip  = getTipText();
     QString ftip = i18n("<br><b>Forecast for</b><br>\n");
-	ftip +=getForecastText();
+    ftip +=getForecastText();
     text = replace(text);
     tip  = replace(tip);
     if (getForecast())
@@ -534,7 +568,7 @@ QString WeatherPlugin::replace(const QString &text)
     res = res.replace(QRegExp("\\%c"), i18n_conditions(getConditions()));
     res = res.replace(QRegExp("\\%v"), i18n("weather", getVisibility()) + (getVisibility().toLong() ? ' ' + i18n("weather",getUD()) : QString::null));
     res = res.replace(QRegExp("\\%i"), QString::number(getIcon()));
-	res = res.replace(QRegExp("\\%o"), getObst());
+    res = res.replace(QRegExp("\\%o"), getObst());
     return res;
 }
 
@@ -581,22 +615,22 @@ QString WeatherPlugin::getTipText()
     QString str = getTip();
     if (str.isEmpty())
         str =	"%l<br><br>\n"
-		"<b>"+i18n("weather","Current Weather")+":</b><br>\n"
-		"<img src=\"icon:weather%i\"> %c<br>\n"+
-		i18n("weather","Temperature")+": <b>%t</b> ("+i18n("weather","feels like")+": <b>%f</b>)<br>\n"+
-		i18n("weather","Humidity")+": <b>%h</b><br>\n"+
-		i18n("weather","Chance of Precipitation")+": <b>%pp%</b><br>\n"+
-		i18n("weather","Pressure")+": <b>%p</b> (%q)<br>\n"+
-		i18n("weather","Wind")+": <b>%b</b> <b>%w %g</b><br>\n"+
-		i18n("weather","Visibility")+": <b>%v</b><br>\n"+
-		i18n("weather","Dew Point")+": <b>%d</b><br>\n"+
-		i18n("weather","Sunrise")+": %r<br>\n"+
-		i18n("weather","Sunset")+": %s<br>\n"+
-		i18n("weather","UV-Intensity is <b>%ut</b> with value <b>%ui</b> (of 11)")+"<br>\n"
-		"<b>"+i18n("weather","Moonphase")+": </b>%mp<br>\n"
-		"<img src=\"icon:moon%mi\"><br>\n"
-		"<br>\n"+
-		i18n("weather","Updated")+": %u<br>\n";
+        "<b>"+i18n("weather","Current Weather")+":</b><br>\n"
+        "<img src=\"icon:weather%i\"> %c<br>\n"+
+        i18n("weather","Temperature")+": <b>%t</b> ("+i18n("weather","feels like")+": <b>%f</b>)<br>\n"+
+        i18n("weather","Humidity")+": <b>%h</b><br>\n"+
+        i18n("weather","Chance of Precipitation")+": <b>%pp%</b><br>\n"+
+        i18n("weather","Pressure")+": <b>%p</b> (%q)<br>\n"+
+        i18n("weather","Wind")+": <b>%b</b> <b>%w %g</b><br>\n"+
+        i18n("weather","Visibility")+": <b>%v</b><br>\n"+
+        i18n("weather","Dew Point")+": <b>%d</b><br>\n"+
+        i18n("weather","Sunrise")+": %r<br>\n"+
+        i18n("weather","Sunset")+": %s<br>\n"+
+        i18n("weather","UV-Intensity is <b>%ut</b> with value <b>%ui</b> (of 11)")+"<br>\n"
+        "<b>"+i18n("weather","Moonphase")+": </b>%mp<br>\n"
+        "<img src=\"icon:moon%mi\"><br>\n"
+        "<br>\n"+
+        i18n("weather","Updated")+": %u<br>\n";
     return str;
 }
 
@@ -641,7 +675,7 @@ static const char *tags[] =
         "dewp",
         "hi",
         "low",
-		"dnam",
+        "dnam",
         NULL,
     };
 
@@ -749,10 +783,10 @@ void WeatherPlugin::element_end(const QString& el)
     }
     if (el == "ppcp" && (m_day == 1) ) {
         if (((m_bDayPart == 'd') && m_bDayForecastIsValid) || ((m_bDayPart == 'n') && ! m_bDayForecastIsValid )){
-    	    setPrecipitation(m_data.toLong());
+            setPrecipitation(m_data.toLong());
             m_data = QString::null;
-    	    return;
-	}
+            return;
+    }
     }
     if (el == "hmid" && m_bCC){
         setHumidity(m_data.toLong());
@@ -770,6 +804,7 @@ void WeatherPlugin::element_end(const QString& el)
         if (m_data == "N/A")
             m_data = "-255";
         setMaxT(m_day, m_data);
+        //setUpdated(QDate::currentDate().toString());
         m_data = QString::null;
         return;
     }
@@ -779,8 +814,8 @@ void WeatherPlugin::element_end(const QString& el)
                 setConditions(m_data);
             }else{
                 setDayConditions(m_day, m_data);
-		if ((m_data == "N/A") && (m_bDayPart == 'd')) 
-		    m_bDayForecastIsValid = false;
+        if ((m_data == "N/A") && (m_bDayPart == 'd')) 
+            m_bDayForecastIsValid = false;
             }
         }
         if (m_bWind && m_bCC)
@@ -817,10 +852,10 @@ void WeatherPlugin::element_end(const QString& el)
     }
     if (el == "up"){
         if (m_data == "in"){
-	    setUP("inHg");
-	} else {
-	    setUP(m_data);
-	}
+        setUP("inHg");
+    } else {
+        setUP(m_data);
+    }
         m_data = QString::null;
         return;
     }
@@ -849,13 +884,13 @@ void WeatherPlugin::element_end(const QString& el)
     }
     if (el == "r" && m_bBar && m_bCC){
         unsigned long v = (unsigned long)m_data.toFloat();
-	if ( QString(getUP()) == "mb" ){
-	    v=v * 75 / 100;
-	    setPressure(v);
-	    setUP("mmHg");
-	} else{
-	    setPressure(v);
-	}
+    if ( QString(getUP()) == "mb" ){
+        v=v * 75 / 100;
+        setPressure(v);
+        setUP("mmHg");
+    } else{
+        setPressure(v);
+    }
         return;
     }
     if (el == "d" && m_bBar && m_bCC){
