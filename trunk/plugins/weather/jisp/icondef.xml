@@ -9,34 +9,34 @@
     <home>http://sim-im.org/</home>
   </meta>
   <icon name="weather0">
-	<object mime="image/png">0.png</object>
+	<object mime="image/png">00.png</object>
   </icon>
   <icon name="weather1">
-	<object mime="image/png">1.png</object>
+	<object mime="image/png">01.png</object>
   </icon>
   <icon name="weather2">
-	<object mime="image/png">2.png</object>
+	<object mime="image/png">02.png</object>
   </icon>
   <icon name="weather3">
-	<object mime="image/png">3.png</object>
+	<object mime="image/png">03.png</object>
   </icon>
   <icon name="weather4">
-	<object mime="image/png">4.png</object>
+	<object mime="image/png">04.png</object>
   </icon>
   <icon name="weather5">
-	<object mime="image/png">5.png</object>
+	<object mime="image/png">05.png</object>
   </icon>
   <icon name="weather6">
-	<object mime="image/png">6.png</object>
+	<object mime="image/png">06.png</object>
   </icon>
   <icon name="weather7">
-	<object mime="image/png">7.png</object>
+	<object mime="image/png">07.png</object>
   </icon>
   <icon name="weather8">
-	<object mime="image/png">8.png</object>
+	<object mime="image/png">08.png</object>
   </icon>
   <icon name="weather9">
-	<object mime="image/png">9.png</object>
+	<object mime="image/png">09.png</object>
   </icon>
   <icon name="weather10">
 	<object mime="image/png">10.png</object>
