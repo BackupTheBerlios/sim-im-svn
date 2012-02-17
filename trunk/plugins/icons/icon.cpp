@@ -69,14 +69,12 @@ void IconsPlugin::setIcons(bool bForce)
     if (!bForce && getDefault())
         return;
     getIcons()->removeIconSet(NULL);
-    if (getDefault()){
-        // NOW KILL ME!
-        // Or we have disccussion list to solve problems. But change your tone
-        getIcons()->addIconSet("icons/smiles.jisp", false);
-    }else{
+    if (getDefault())
+        getIcons()->addIconSet("icons/smiles.jisp", true);
+    else
         for (unsigned i = 1; i <= getNIcons(); i++)
             getIcons()->addIconSet(getIcon(i), false);
-    }
+    
     EventIconChanged().process();
 }
 

@@ -58,6 +58,7 @@ public:
     void removeIconSet(IconSet*);
 protected slots:
     void iconChanged(int);
+    void fire();
 protected:
     virtual bool processEvent(Event *e);
     class IconsPrivate *d;

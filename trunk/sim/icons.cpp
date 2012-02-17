@@ -631,9 +631,10 @@ Icons::Icons()
     QMimeSourceFactory::setDefaultFactory(new MyMimeSourceFactory());
     if (oldDefaultFactory)
         QMimeSourceFactory::addFactory( oldDefaultFactory );
-    addIconSet("icons/CrystalClear.jisp", true);
     d->defSets.append(new WrkIconSet);
+    addIconSet("icons/CrystalClear.jisp", true);
     addIconSet("icons/CrystalClearSmiles.jisp", false);
+    QTimer::singleShot( 30000, this, SLOT(fire()) );
 }
 
 Icons::~Icons()
@@ -659,6 +660,11 @@ bool Icons::processEvent(Event *e)
 }
 
 void Icons::iconChanged(int)
+{
+    EventIconChanged().process();
+}
+
+void Icons::fire()
 {
     EventIconChanged().process();
 }
