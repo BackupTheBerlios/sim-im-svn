@@ -70,7 +70,8 @@ void IconsPlugin::setIcons(bool bForce)
         return;
     getIcons()->removeIconSet(NULL);
     if (getDefault()){
-        getIcons()->addIconSet("icons/sim.jisp", false); //REMOVE IT AND I KILL YOU!
+        // NOW KILL ME!
+        // Or we have disccussion list to solve problems. But change your tone
         getIcons()->addIconSet("icons/smiles.jisp", false);
     }else{
         for (unsigned i = 1; i <= getNIcons(); i++)
