@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9e7fe25a-9eda-4ec4-ad67-7927c6acb955}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0813f6b4-dd40-4139-9899-8776ed94da2d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{22b581c1-834f-4c0c-af8a-cf83ab0d2b7b}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{4a017c63-082e-416f-a680-b95c11c11436}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="jisp">
+      <UniqueIdentifier>{16dbdebf-862f-41f7-bd6c-dd8f2de1e098}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="moc_weather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_weathercfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_weathercfgbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_wifacecfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_wifacecfgbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="weather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="weathercfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="weathercfgbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wifacecfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wifacecfgbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="weathercfgbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wifacecfgbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\autolink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\forwards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\include\json\writer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_batchallocator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="weather.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jisp\10.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\11.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\12.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\13.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\14.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\15.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\16.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\17.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\18.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\19.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\20.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\21.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\22.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\23.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\24.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\25.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\26.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\27.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\28.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\29.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\30.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\31.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\32.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\33.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\34.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\35.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\36.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\37.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\38.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\39.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\40.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\41.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\42.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\43.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\44.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\45.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\46.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\47.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m0.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m1.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m10.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m11.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m12.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m13.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m14.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m15.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m16.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m17.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m18.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m19.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m2.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m20.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m21.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m22.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m23.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m24.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m25.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m26.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m27.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m28.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m29.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m3.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m4.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m5.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m6.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m7.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m8.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\m9.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\na.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_internalarray.inl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_internalmap.inl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\libraries\jsoncpp-src-0.5.0\src\lib_json\json_valueiterator.inl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="jisp\00.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\01.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\02.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\03.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\04.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\05.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\06.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\07.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\08.png">
+      <Filter>jisp</Filter>
+    </None>
+    <None Include="jisp\09.png">
+      <Filter>jisp</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="weather.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="weathercfg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wifacecfg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="weathercfgbase.ui">
+      <Filter>Interfaces</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wifacecfgbase.ui">
+      <Filter>Interfaces</Filter>
+    </CustomBuild>
+    <CustomBuild Include="jisp\icondef.xml">
+      <Filter>jisp</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

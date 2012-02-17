@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="9,00"
 	Name="_core"
 	ProjectGUID="{438ECB60-E207-4DB8-A46A-1EC2EA9A714A}"
 	RootNamespace="_core"
+	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
 		<Platform
@@ -79,6 +80,8 @@
 				AdditionalDependencies="$(SolutionDir)$(ConfigurationName)\sim.lib"
 				OutputFile="$(OutDir)\plugins\$(ProjectName).dll"
 				SuppressStartupBanner="true"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -98,9 +101,6 @@
 			/>
 			<Tool
 				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -172,6 +172,8 @@
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
 				GenerateDebugInformation="true"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -191,9 +193,6 @@
 			/>
 			<Tool
 				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -7187,175 +7186,247 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="gpl-jisp"
+			Name="CrystalClear"
 			>
 			<File
-				RelativePath=".\GPL-Icons\1downarrow.png"
+				RelativePath=".\CrystalClear-Icons\1downarrow.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\1leftarrow.png"
+				RelativePath=".\CrystalClear-Icons\1leftarrow.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\1rightarrow.png"
+				RelativePath=".\CrystalClear-Icons\1rightarrow.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\1uparrow.png"
+				RelativePath=".\CrystalClear-Icons\1uparrow.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\aim_online.png"
+				RelativePath=".\CrystalClear-Icons\add.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\auth.png"
+				RelativePath=".\CrystalClear-Icons\aim_online.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\button_cancel.png"
+				RelativePath=".\CrystalClear-Icons\auth.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\button_ok.png"
+				RelativePath=".\CrystalClear-Icons\bg_color.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\cell.png"
+				RelativePath=".\CrystalClear-Icons\birthday.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\collapsed.png"
+				RelativePath=".\CrystalClear-Icons\button_cancel.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\configure.png"
+				RelativePath=".\CrystalClear-Icons\button_ok.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\contacts.png"
+				RelativePath=".\CrystalClear-Icons\cancel.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\def_status_away.png"
+				RelativePath=".\CrystalClear-Icons\cell.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\def_status_dnd.png"
+				RelativePath=".\CrystalClear-Icons\chat.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\def_status_ffc.png"
+				RelativePath=".\CrystalClear-Icons\close_after_send.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\def_status_na.png"
+				RelativePath=".\CrystalClear-Icons\collapsed.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\def_status_occupied.png"
+				RelativePath=".\CrystalClear-Icons\configure.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\empty.png"
+				RelativePath=".\CrystalClear-Icons\connect.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\error.png"
+				RelativePath=".\CrystalClear-Icons\contacts.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\exit.png"
+				RelativePath=".\CrystalClear-Icons\def_status_away.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\expanded.png"
+				RelativePath=".\CrystalClear-Icons\def_status_dnd.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\fax.png"
+				RelativePath=".\CrystalClear-Icons\def_status_ffc.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\file.png"
+				RelativePath=".\CrystalClear-Icons\def_status_na.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\fileopen.png"
+				RelativePath=".\CrystalClear-Icons\def_status_occupied.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\filesave.png"
+				RelativePath=".\CrystalClear-Icons\editcopy.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\find_user.png"
+				RelativePath=".\CrystalClear-Icons\editcut.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\fonts.png"
+				RelativePath=".\CrystalClear-Icons\editpaste.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\gadu_away.png"
+				RelativePath=".\CrystalClear-Icons\education.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\gadu_dnd.png"
+				RelativePath=".\CrystalClear-Icons\empty.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\gadu_invisible.png"
+				RelativePath=".\CrystalClear-Icons\encoding.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\gadu_offline.png"
+				RelativePath=".\CrystalClear-Icons\encrypted.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\gadu_online.png"
+				RelativePath=".\CrystalClear-Icons\error.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\group_collapsed.png"
+				RelativePath=".\CrystalClear-Icons\exit.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\group_expanded.png"
+				RelativePath=".\CrystalClear-Icons\expanded.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\grp_create.png"
+				RelativePath=".\CrystalClear-Icons\fax.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\grp_off.png"
+				RelativePath=".\CrystalClear-Icons\fg_color.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\grp_on.png"
+				RelativePath=".\CrystalClear-Icons\file.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\grp_rename.png"
+				RelativePath=".\CrystalClear-Icons\fileopen.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\home.png"
+				RelativePath=".\CrystalClear-Icons\filesave.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\icondef.xml"
+				RelativePath=".\CrystalClear-Icons\filter.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\find_user.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\floating.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\fonts.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\gadu_away.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\gadu_dnd.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\gadu_invisible.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\gadu_offline.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\gadu_online.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\group_collapsed.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\group_expanded.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\grp_create.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\grp_off.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\grp_on.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\grp_rename.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\help.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\history.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\home.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\icondef.xml"
 				>
 				<FileConfiguration
 					Name="Release|Win32"
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Make gpl.jisp"
-						CommandLine="mkdir $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)*.png $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)icondef.xml $(IntDir)\jisp&#x0D;&#x0A;jar -cMf $(OutDir)\icons\gpl.jisp -C $(IntDir)\jisp .&#x0D;&#x0A;del /Q $(IntDir)\jisp\*.*&#x0D;&#x0A;rmdir /Q $(IntDir)\jisp&#x0D;&#x0A;"
-						Outputs="$(OutDir)\icons\gpl.jisp"
+						Description="Make $(SafeParentName).jisp"
+						CommandLine="mkdir $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)*.png $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)icondef.xml $(IntDir)\jisp&#x0D;&#x0A;jar -cMf $(OutDir)\icons\$(SafeParentName).jisp -C $(IntDir)\jisp .&#x0D;&#x0A;del /Q $(IntDir)\jisp\*.*&#x0D;&#x0A;rmdir /Q $(IntDir)\jisp&#x0D;&#x0A;"
+						Outputs="$(OutDir)\icons\$(SafeParentName).jisp"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -7363,118 +7434,446 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Make gpl.jisp"
-						CommandLine="mkdir $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)*.png $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)icondef.xml $(IntDir)\jisp&#x0D;&#x0A;jar -cMf $(OutDir)\icons\gpl.jisp -C $(IntDir)\jisp .&#x0D;&#x0A;del /Q $(IntDir)\jisp\*.*&#x0D;&#x0A;rmdir /Q $(IntDir)\jisp&#x0D;&#x0A;"
-						Outputs="$(OutDir)\icons\gpl.jisp"
+						Description="Make $(SafeParentName).jisp"
+						CommandLine="mkdir $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)*.png $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)icondef.xml $(IntDir)\jisp&#x0D;&#x0A;jar -cMf $(OutDir)\icons\$(SafeParentName).jisp -C $(IntDir)\jisp .&#x0D;&#x0A;del /Q $(IntDir)\jisp\*.*&#x0D;&#x0A;rmdir /Q $(IntDir)\jisp&#x0D;&#x0A;"
+						Outputs="$(OutDir)\icons\$(SafeParentName).jisp"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\icq_online.png"
+				RelativePath=".\CrystalClear-Icons\icq-phone-busy.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\jabber.png"
+				RelativePath=".\CrystalClear-Icons\icq-phone.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\jabber_offline.png"
+				RelativePath=".\CrystalClear-Icons\icq_online.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\mail_generic.png"
+				RelativePath=".\CrystalClear-Icons\ignoreuser.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\message.png"
+				RelativePath=".\CrystalClear-Icons\info.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\msn_online.png"
+				RelativePath=".\CrystalClear-Icons\interest.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\network.png"
+				RelativePath=".\CrystalClear-Icons\jabber.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\no_phone.png"
+				RelativePath=".\CrystalClear-Icons\jabber_offline.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\non-im-contact.png"
+				RelativePath=".\CrystalClear-Icons\listmsg.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\online_off.png"
+				RelativePath=".\CrystalClear-Icons\livejournal.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\online_on.png"
+				RelativePath=".\CrystalClear-Icons\mail_generic.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\pager.png"
+				RelativePath=".\CrystalClear-Icons\message.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\phone.png"
+				RelativePath=".\CrystalClear-Icons\more_info.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\remove.png"
+				RelativePath=".\CrystalClear-Icons\msn_lunch.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\run.png"
+				RelativePath=".\CrystalClear-Icons\msn_onback.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\security.png"
+				RelativePath=".\CrystalClear-Icons\msn_online.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\sim.png"
+				RelativePath=".\CrystalClear-Icons\msn_onphone.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\sms.png"
+				RelativePath=".\CrystalClear-Icons\network.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\url.png"
+				RelativePath=".\CrystalClear-Icons\new.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\webpress.png"
+				RelativePath=".\CrystalClear-Icons\no_phone.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\work.png"
+				RelativePath=".\CrystalClear-Icons\non-im-contact.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\yahoo_away.png"
+				RelativePath=".\CrystalClear-Icons\nosound.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\yahoo_dnd.png"
+				RelativePath=".\CrystalClear-Icons\online_off.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\yahoo_invisible.png"
+				RelativePath=".\CrystalClear-Icons\online_on.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\yahoo_na.png"
+				RelativePath=".\CrystalClear-Icons\pager.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\yahoo_offline.png"
+				RelativePath=".\CrystalClear-Icons\phone.png"
 				>
 			</File>
 			<File
-				RelativePath=".\GPL-Icons\yahoo_online.png"
+				RelativePath=".\CrystalClear-Icons\pict.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\redo.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\register.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\remove.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\run.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\screen_alert.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\security.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\sim.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\SMS-protocol.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\sms.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\sound.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\text_bold.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\text_italic.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\text_strike.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\text_under.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\translit.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\undo.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_1.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_2.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_3.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_4.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_5.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_6.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\unknown_icon_7.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\urgentmsg.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\url.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\web-panel.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\webpress.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\work.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\writing.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\yahoo_away.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\yahoo_dnd.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\yahoo_invisible.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\yahoo_na.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\yahoo_offline.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Icons\yahoo_online.png"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="CrystalClearSmiles"
+			>
+			<File
+				RelativePath=".\CrystalClear-Smiles\angry.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\bat.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\beer.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\biggrin.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\cake.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\camera.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\cat.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\clock.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\cocktail.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\confused.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\cry.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\cup.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\dog.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\email.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\embarassed.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\film.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\foot_in_mouth.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\icondef.xml"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Make $(SafeParentName).jisp"
+						CommandLine="mkdir $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)*.png $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)icondef.xml $(IntDir)\jisp&#x0D;&#x0A;jar -cMf $(OutDir)\icons\$(SafeParentName).jisp -C $(IntDir)\jisp .&#x0D;&#x0A;del /Q $(IntDir)\jisp\*.*&#x0D;&#x0A;rmdir /Q $(IntDir)\jisp"
+						Outputs="$(OutDir)\icons\$(SafeParentName).jisp"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Make $(SafeParentName).jisp"
+						CommandLine="mkdir $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)*.png $(IntDir)\jisp&#x0D;&#x0A;copy $(InputDir)icondef.xml $(IntDir)\jisp&#x0D;&#x0A;jar -cMf $(OutDir)\icons\$(SafeParentName).jisp -C $(IntDir)\jisp .&#x0D;&#x0A;del /Q $(IntDir)\jisp\*.*&#x0D;&#x0A;rmdir /Q $(IntDir)\jisp"
+						Outputs="$(OutDir)\icons\$(SafeParentName).jisp"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\innocent.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\kiss.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\lightbulb.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\love.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\note.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\omg.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\phone.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\present.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\rose.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\sad.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\shade.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\sleep.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\smile.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\star.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\teeth.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\thumbs_down.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\thumbs_up.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\tongue.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\undecided.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\unhappy.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\unlove.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\wilted_rose.png"
+				>
+			</File>
+			<File
+				RelativePath=".\CrystalClear-Smiles\wink.png"
 				>
 			</File>
 		</Filter>

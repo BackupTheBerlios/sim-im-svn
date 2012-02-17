@@ -126,7 +126,7 @@ bool ZodiakPlugin::eventFilter(QObject *o, QEvent *e)
     }
     if (e->type() == QEvent::ChildRemoved){
         QChildEvent *ce = (QChildEvent*)e;
-        if (ce->child()->inherits("DatePicker")){
+        if (ce->child() && ce->child()->inherits("DatePicker")){ //crash here:, no child, child is zero!
             DatePicker *picker = (DatePicker*)(ce->child());
             for (QValueListIterator<Picker> it = m_pickers.begin(); it != m_pickers.end(); ++it){
                 if ((*it).picker == picker){
