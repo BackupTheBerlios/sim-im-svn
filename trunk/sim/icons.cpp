@@ -31,6 +31,7 @@
 #include <qfileinfo.h>
 #include <qdir.h>
 #include <qmap.h>
+#include <qtimer.h>
 
 #ifdef USE_KDE
 # include <kapp.h>
